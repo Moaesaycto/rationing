@@ -1,0 +1,158 @@
+{
+    "options": {
+        "weight_unit": "kg",
+        "distance_unit": "km",
+        "time_unit": "minute",
+        "offset": 0,
+        "starting": 160
+    },
+    "strength": [
+        {
+            "title": "Squats",
+            "workouts": [
+                "A",
+                "B"
+            ],
+            "increment": 5,
+            "order": 0,
+            "start": 60,
+            "reps": 5,
+            "set": 5
+        },
+        {
+            "title": "Bench Press",
+            "workouts": [
+                "A"
+            ],
+            "increment": 2.5,
+            "order": 1,
+            "start": 40,
+            "reps": 5,
+            "set": 5
+        },
+        {
+            "title": "Barbell Row",
+            "workouts": [
+                "A"
+            ],
+            "increment": 2.5,
+            "order": 2,
+            "start": 40,
+            "reps": 5,
+            "set": 5
+        },
+        {
+            "title": "Overhead Press",
+            "workouts": [
+                "B"
+            ],
+            "increment": 2.5,
+            "order": 1,
+            "start": 30,
+            "reps": 5,
+            "set": 5
+        },
+        {
+            "title": "Deadlift",
+            "workouts": [
+                "B"
+            ],
+            "increment": 5,
+            "order": 1,
+            "start": 30,
+            "reps": 5,
+            "set": 5
+        }
+    ],
+    "growth": [
+        {
+            "id": 1,
+            "title": "Dumbbell Bench Press",
+            "muscleGroup": "Chest",
+            "reps": 10,
+            "set": 3,
+            "restSeconds": 90,
+            "start": 15,
+            "increment": 2.5
+        },
+        {
+            "id": 4,
+            "title": "One-arm Dumbbell Row",
+            "muscleGroup": "Back",
+            "reps": 12,
+            "set": 3,
+            "restSeconds": 90,
+            "start": 15,
+            "increment": 2.5
+        },
+        {
+            "id": 2,
+            "title": "Dumbbell Curl",
+            "muscleGroup": "Arms",
+            "reps": 10,
+            "set": 3,
+            "restSeconds": 60,
+            "start": 10,
+            "increment": 2
+        },
+        {
+            "id": 3,
+            "title": "Overhead Dumbbell Triceps Extension",
+            "muscleGroup": "Arms",
+            "reps": 12,
+            "set": 3,
+            "restSeconds": 60,
+            "start": 10,
+            "increment": 2
+        },
+        {
+            "id": 5,
+            "title": "Dumbbell Lateral Raise",
+            "muscleGroup": "Shoulders",
+            "reps": 12,
+            "set": 3,
+            "restSeconds": 60,
+            "start": 5,
+            "increment": 1
+        },
+        {
+            "id": 6,
+            "title": "Dumbbell Walking Lunge",
+            "muscleGroup": "Legs",
+            "reps": 10,
+            "set": 3,
+            "restSeconds": 90,
+            "start": 10,
+            "increment": 2.5
+        }
+    ],
+    "cardio": [
+        {
+            "id": 1,
+            "title": "Cycling (Stationary)",
+            "mode": "duration",
+            "base": 15,
+            "increment_per_unit": 0.1,
+            "min": 10,
+            "max": 45
+        },
+        {
+            "id": 2,
+            "title": "Walking (Outdoor or Treadmill)",
+            "mode": "distance",
+            "base": 1.5,
+            "increment_per_unit": 0.02,
+            "min": 1,
+            "max": 5
+        },
+        {
+            "id": 3,
+            "title": "Jogging",
+            "mode": "distance",
+            "base": 0.8,
+            "increment_per_unit": 0.015,
+            "min": 0.5,
+            "max": 4
+        }
+    ]
+}

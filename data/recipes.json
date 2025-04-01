@@ -1,0 +1,431 @@
+{
+    "marinades": [
+        {
+            "id": 1,
+            "category": "chicken",
+            "title": "Lemon Herb Garlic",
+            "ingredients": [
+                "Olive Oil",
+                "Lemon Juice",
+                "Garlic (Minced or Powder)",
+                "Parsley",
+                "Oregano",
+                "Thyme",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 2,
+            "category": "chicken",
+            "title": "Spicy Paprika Rub",
+            "ingredients": [
+                "Olive Oil or Butter",
+                "Smoked Paprika",
+                "Cayenne Pepper",
+                "Cumin",
+                "Garlic Powder",
+                "Onion Powder",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 3,
+            "category": "chicken",
+            "title": "Soy-Ginger Umami",
+            "ingredients": [
+                "Soy Sauce",
+                "Apple Cider Vinegar",
+                "Fresh or Powdered Ginger",
+                "Garlic (Minced or Powder)",
+                "Optional: Sesame Oil (if in rations)"
+            ]
+        },
+        {
+            "id": 4,
+            "category": "chicken",
+            "title": "Italian Grill",
+            "ingredients": [
+                "Salt",
+                "Pepper",
+                "Garlic",
+                "Italian seasoning",
+                "Dijon mustard",
+                "Coconut aminos or soy sauce",
+                "Olive oil or avocado oil",
+                "Lemon juice"
+            ]
+        },
+        {
+            "id": 5,
+            "category": "chicken",
+            "title": "Tandoori Spice Rub",
+            "ingredients": [
+                "Olive Oil",
+                "Paprika",
+                "Cumin",
+                "Coriander",
+                "Garlic Powder",
+                "Ginger Powder",
+                "Cinnamon",
+                "Turmeric",
+                "Salt",
+                "Lemon Juice"
+            ]
+        },
+        {
+            "id": 6,
+            "category": "chicken",
+            "title": "Zesty Mustard Herb",
+            "ingredients": [
+                "Dijon Mustard",
+                "Olive Oil",
+                "Apple Cider Vinegar",
+                "Garlic",
+                "Oregano",
+                "Thyme",
+                "Basil",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 7,
+            "category": "chicken",
+            "title": "Moroccan Spice Blend",
+            "ingredients": [
+                "Olive Oil",
+                "Cumin",
+                "Coriander",
+                "Paprika",
+                "Cinnamon",
+                "Ginger",
+                "Garlic",
+                "Lemon Juice",
+                "Salt"
+            ]
+        },
+        {
+            "id": 8,
+            "category": "chicken",
+            "title": "Garlic Dill Pickle Brine",
+            "ingredients": [
+                "Pickle Juice (from unsweetened pickles)",
+                "Garlic",
+                "Dill",
+                "Mustard Powder",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 9,
+            "category": "chicken",
+            "title": "Hot & Smoky Chipotle",
+            "ingredients": [
+                "Olive Oil or Butter",
+                "Smoked Paprika",
+                "Cayenne",
+                "Mustard Powder",
+                "Garlic Powder",
+                "Apple Cider Vinegar",
+                "Salt",
+                "Black Pepper"
+            ]
+        },
+        {
+            "id": 10,
+            "category": "chicken",
+            "title": "Savory Sesame Soy",
+            "ingredients": [
+                "Soy Sauce",
+                "Optional: Sesame Oil (if in rations)",
+                "Ginger (Powdered or Fresh)",
+                "Garlic",
+                "Onion Powder",
+                "Black Pepper"
+            ]
+        },
+        {
+            "id": 11,
+            "category": "beef",
+            "title": "Classic Garlic Herb",
+            "ingredients": [
+                "Olive Oil",
+                "Garlic (Minced or Powder)",
+                "Rosemary",
+                "Thyme",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 12,
+            "category": "beef",
+            "title": "Soy Balsamic Umami",
+            "ingredients": [
+                "Soy Sauce",
+                "Apple Cider Vinegar",
+                "Garlic",
+                "Onion Powder",
+                "Black Pepper"
+            ]
+        },
+        {
+            "id": 13,
+            "category": "beef",
+            "title": "Chimichurri-Inspired",
+            "ingredients": [
+                "Olive Oil",
+                "Parsley",
+                "Oregano",
+                "Garlic",
+                "Red Wine Vinegar",
+                "Chilli Flakes",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 14,
+            "category": "beef",
+            "title": "Coffee Cocoa Rub",
+            "ingredients": [
+                "Instant Coffee or Espresso Powder",
+                "Unsweetened Cocoa Powder",
+                "Smoked Paprika",
+                "Garlic Powder",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 15,
+            "category": "beef",
+            "title": "Spicy Cumin Chilli",
+            "ingredients": [
+                "Olive Oil",
+                "Cumin",
+                "Paprika",
+                "Cayenne Pepper",
+                "Garlic",
+                "Oregano",
+                "Salt",
+                "Black Pepper"
+            ]
+        },
+        {
+            "id": 16,
+            "category": "beef",
+            "title": "Mustard Herb Crust",
+            "ingredients": [
+                "Dijon Mustard",
+                "Garlic",
+                "Parsley",
+                "Sage",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 17,
+            "category": "pork",
+            "title": "Garlic Herb Dijon",
+            "ingredients": [
+                "Olive Oil",
+                "Dijon Mustard",
+                "Garlic",
+                "Sage",
+                "Rosemary",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 18,
+            "category": "pork",
+            "title": "Smoky Paprika Rub",
+            "ingredients": [
+                "Olive Oil or Butter",
+                "Smoked Paprika",
+                "Garlic Powder",
+                "Onion Powder",
+                "Cumin",
+                "Salt",
+                "Black Pepper"
+            ]
+        },
+        {
+            "id": 19,
+            "category": "pork",
+            "title": "Lemon Mustard Zing",
+            "ingredients": [
+                "Lemon Juice",
+                "Dijon Mustard",
+                "Oregano",
+                "Thyme",
+                "Olive Oil",
+                "Garlic",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 20,
+            "category": "pork",
+            "title": "Asian-Style Soy Ginger",
+            "ingredients": [
+                "Soy Sauce",
+                "Apple Cider Vinegar",
+                "Garlic",
+                "Ginger",
+                "Coriander",
+                "Optional: Sesame Oil"
+            ]
+        },
+        {
+            "id": 21,
+            "category": "pork",
+            "title": "Cumin Chilli Rub",
+            "ingredients": [
+                "Cumin",
+                "Paprika",
+                "Cayenne",
+                "Garlic Powder",
+                "Olive Oil",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 22,
+            "category": "pork",
+            "title": "Pickle Brine BBQ",
+            "ingredients": [
+                "Unsweetened Pickle Juice",
+                "Mustard Powder",
+                "Garlic",
+                "Dill",
+                "Paprika",
+                "Salt",
+                "Pepper"
+            ]
+        }
+    ],
+    "sauces": [
+        {
+            "id": 1,
+            "title": "Tangy Mustard Vinaigrette",
+            "uses": [
+                "pork",
+                "chicken",
+                "salads"
+            ],
+            "ingredients": [
+                "Apple Cider Vinegar",
+                "Mustard",
+                "Olive Oil",
+                "Garlic Powder",
+                "Salt",
+                "Pepper"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Keto BBQ-Mayo",
+            "uses": [
+                "pork",
+                "pulled meats",
+                "dipping"
+            ],
+            "ingredients": [
+                "BBQ Sauce (Keto)",
+                "Mustard",
+                "Sour Cream or Olive Oil",
+                "Smoked Paprika",
+                "Hot Sauce (no sugar)"
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Soy-Mustard Dipping Sauce",
+            "uses": [
+                "pork",
+                "chicken",
+                "seafood"
+            ],
+            "ingredients": [
+                "Soy Sauce",
+                "Mustard",
+                "Lemon Juice",
+                "Garlic Powder",
+                "Hot Sauce (no sugar)"
+            ]
+        },
+        {
+            "id": 4,
+            "title": "Creamy Pepper Sauce",
+            "uses": [
+                "beef",
+                "pork",
+                "steak"
+            ],
+            "ingredients": [
+                "Pure Cream",
+                "Mustard",
+                "Cracked Black Pepper",
+                "Garlic Powder",
+                "Salt"
+            ]
+        },
+        {
+            "id": 5,
+            "title": "Sweet & Sour Soy",
+            "uses": [
+                "stir-fry",
+                "chicken",
+                "pork"
+            ],
+            "ingredients": [
+                "Soy Sauce",
+                "Lemon Juice",
+                "Ketchup (Keto)",
+                "Garlic Powder",
+                "Erythritol (optional)"
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Hot & Smoky Aioli",
+            "uses": [
+                "grilled meat",
+                "vegetables",
+                "dips"
+            ],
+            "ingredients": [
+                "Olive Oil or Homemade Mayo",
+                "Mustard",
+                "Garlic",
+                "Smoked Paprika",
+                "Hot Sauce (no sugar)",
+                "Lemon Juice"
+            ]
+        },
+        {
+            "id": 7,
+            "title": "Vinegar Chilli Splash",
+            "uses": [
+                "pork belly",
+                "fatty meats"
+            ],
+            "ingredients": [
+                "Apple Cider Vinegar",
+                "Hot Sauce (no sugar)",
+                "Mustard Powder",
+                "Salt",
+                "Coriander or Cumin (optional)"
+            ]
+        }
+    ]
+}

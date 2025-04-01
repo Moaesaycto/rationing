@@ -1,0 +1,1230 @@
+{
+    "ingredients": [
+        {
+            "id": 0,
+            "name": "Brown Rice",
+            "unit": "cup",
+            "conversion": 2,
+            "nutrition": {
+                "energy": 1450.0,
+                "protein": 7.9,
+                "fat": {
+                    "total": 3.1,
+                    "saturated": 1.0
+                },
+                "carbohydrate": {
+                    "total": 69.1,
+                    "sugars": 1.1
+                },
+                "fibre": 3.5,
+                "sodium": 5.0
+            },
+            "category": "carbohydrates",
+            "subcategory": "Grains & Legumes",
+            "serving": 0.25
+        },
+        {
+            "id": 1,
+            "name": "Rolled Oats",
+            "unit": "cup",
+            "conversion": 0.85,
+            "nutrition": {
+                "energy": 1590.0,
+                "protein": 13.1,
+                "fat": {
+                    "total": 9,
+                    "saturated": 1.5
+                },
+                "carbohydrate": {
+                    "total": 55.80,
+                    "sugars": 1.0
+                },
+                "fibre": 10.8,
+                "sodium": 5.0
+            },
+            "category": "carbohydrates",
+            "subcategory": "Grains & Legumes",
+            "serving": 0.25
+        },
+        {
+            "id": 2,
+            "name": "Quinoa",
+            "unit": "cup",
+            "conversion": 1.85,
+            "nutrition": {
+                "energy": 1613.0,
+                "protein": 14.2,
+                "fat": {
+                    "total": 6.07,
+                    "saturated": 0.7
+                },
+                "carbohydrate": {
+                    "total": 64.16,
+                    "sugars": 2.50
+                },
+                "fibre": 7.00,
+                "sodium": 5.0
+            },
+            "category": "carbohydrates",
+            "subcategory": "Grains & Legumes",
+            "serving": 0.25
+        },
+        {
+            "id": 3,
+            "name": "Chickpeas (Canned)",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 267,
+                "protein": 4.5,
+                "fat": {
+                    "total": 0.2,
+                    "saturated": 0.1
+                },
+                "carbohydrate": {
+                    "total": 8.5,
+                    "sugars": 0.1
+                },
+                "fibre": 5.9,
+                "sodium": 33.0
+            },
+            "category": "carbohydrates",
+            "subcategory": "Grains & Legumes",
+            "serving": 50
+        },
+        {
+            "id": 4,
+            "name": "Lentils",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1350,
+                "protein": 25.2,
+                "fat": {
+                    "total": 2.3,
+                    "saturated": 1.0
+                },
+                "carbohydrate": {
+                    "total": 40.3,
+                    "sugars": 1.4
+                },
+                "fibre": 19.3,
+                "sodium": 5.0
+            },
+            "category": "carbohydrates",
+            "subcategory": "Grains & Legumes",
+            "serving": 50
+        },
+        {
+            "id": 5,
+            "name": "Red Kidney Beans",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 423,
+                "protein": 7.8,
+                "fat": {
+                    "total": 0.5,
+                    "saturated": 0.1
+                },
+                "carbohydrate": {
+                    "total": 12.9,
+                    "sugars": 0.6
+                },
+                "fibre": 6.5,
+                "sodium": 5.0
+            },
+            "category": "carbohydrates",
+            "subcategory": "Grains & Legumes",
+            "serving": 50
+        },
+        {
+            "id": 6,
+            "name": "Pumpkin",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 109,
+                "protein": 1.1,
+                "fat": {
+                    "total": 0.1,
+                    "saturated": 0.0
+                },
+                "carbohydrate": {
+                    "total": 6.5,
+                    "sugars": 2.8
+                },
+                "fibre": 1.1,
+                "sodium": 1.0
+            },
+            "category": "carbohydrates",
+            "subcategory": "Vegetables & Starches",
+            "serving": 80
+        },
+        {
+            "id": 7,
+            "name": "Sweet Potato",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 359,
+                "protein": 1.6,
+                "fat": {
+                    "total": 0.1,
+                    "saturated": 0.0
+                },
+                "carbohydrate": {
+                    "total": 20.1,
+                    "sugars": 4.2
+                },
+                "fibre": 3.0,
+                "sodium": 55.0
+            },
+            "category": "carbohydrates",
+            "subcategory": "Vegetables & Starches",
+            "serving": 50
+        },
+        {
+            "id": 8,
+            "name": "Peas",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 247,
+                "protein": 4.8,
+                "fat": {
+                    "total": 1.0,
+                    "saturated": 1.0
+                },
+                "carbohydrate": {
+                    "total": 6.4,
+                    "sugars": 2.7
+                },
+                "fibre": 5.2,
+                "sodium": 5.0
+            },
+            "category": "carbohydrates",
+            "subcategory": "Vegetables & Starches",
+            "serving": 50
+        },
+        {
+            "id": 9,
+            "name": "Black Beans",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 460,
+                "protein": 7.2,
+                "fat": {
+                    "total": 1,
+                    "saturated": 0.2
+                },
+                "carbohydrate": {
+                    "total": 14.5,
+                    "sugars": 1.8
+                },
+                "fibre": 6.80,
+                "sodium": 222
+            },
+            "category": "carbohydrates",
+            "subcategory": "Grains & Legumes",
+            "serving": 50
+        },
+        {
+            "id": 10,
+            "name": "Unsalted Butter",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 3110,
+                "protein": 1.0,
+                "fat": {
+                    "total": 83.60,
+                    "saturated": 54.1
+                },
+                "carbohydrate": {
+                    "total": 1,
+                    "sugars": 1
+                },
+                "fibre": 0,
+                "sodium": 7
+            },
+            "category": "fats",
+            "subcategory": "Oils & Butter",
+            "serving": 10
+        },
+        {
+            "id": 11,
+            "name": "Olive Oil",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 3400,
+                "protein": 0,
+                "fat": {
+                    "total": 91.9,
+                    "saturated": 14.1
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 5
+            },
+            "category": "fats",
+            "subcategory": "Oils & Butter",
+            "serving": 10
+        },
+        {
+            "id": 12,
+            "name": "Coconut Oil",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 3660,
+                "protein": 0.1,
+                "fat": {
+                    "total": 99,
+                    "saturated": 94.3
+                },
+                "carbohydrate": {
+                    "total": 0.2,
+                    "sugars": 0.1
+                },
+                "fibre": 0,
+                "sodium": 5
+            },
+            "category": "fats",
+            "subcategory": "Oils & Butter",
+            "serving": 10
+        },
+        {
+            "id": 13,
+            "name": "Avocado",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 670,
+                "protein": 2.0,
+                "fat": {
+                    "total": 14.7,
+                    "saturated": 2.1
+                },
+                "carbohydrate": {
+                    "total": 8.5,
+                    "sugars": 0.7
+                },
+                "fibre": 6.7,
+                "sodium": 7
+            },
+            "category": "fats",
+            "subcategory": "Plant-Based fats",
+            "serving": 50
+        },
+        {
+            "id": 14,
+            "name": "Pure Cream",
+            "unit": "mL",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1390,
+                "protein": 2.1,
+                "fat": {
+                    "total": 35.0,
+                    "saturated": 23
+                },
+                "carbohydrate": {
+                    "total": 3.1,
+                    "sugars": 3.1
+                },
+                "fibre": 0,
+                "sodium": 37
+            },
+            "category": "fats",
+            "subcategory": "Dairy-Based fats",
+            "serving": 20
+        },
+        {
+            "id": 15,
+            "name": "Sour Cream",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1400,
+                "protein": 1.9,
+                "fat": {
+                    "total": 36.0,
+                    "saturated": 24
+                },
+                "carbohydrate": {
+                    "total": 2.2,
+                    "sugars": 2.2
+                },
+                "fibre": 0,
+                "sodium": 24
+            },
+            "category": "fats",
+            "subcategory": "Dairy-Based fats",
+            "serving": 20
+        },
+        {
+            "id": 16,
+            "name": "Thickened Cream",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1400,
+                "protein": 2.4,
+                "fat": {
+                    "total": 35.4,
+                    "saturated": 24.1
+                },
+                "carbohydrate": {
+                    "total": 3,
+                    "sugars": 3
+                },
+                "fibre": 0,
+                "sodium": 25
+            },
+            "category": "fats",
+            "subcategory": "Dairy-Based fats",
+            "serving": 20
+        },
+        {
+            "id": 17,
+            "name": "Cream Cheese",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1420,
+                "protein": 5.4,
+                "fat": {
+                    "total": 33.3,
+                    "saturated": 21
+                },
+                "carbohydrate": {
+                    "total": 5.5,
+                    "sugars": 4.5
+                },
+                "fibre": 0,
+                "sodium": 341
+            },
+            "category": "fats",
+            "subcategory": "Dairy-Based fats",
+            "serving": 20
+        },
+        {
+            "id": 18,
+            "name": "Walnuts",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 2738,
+                "protein": 15.2,
+                "fat": {
+                    "total": 65.2,
+                    "saturated": 6.1
+                },
+                "carbohydrate": {
+                    "total": 13.7,
+                    "sugars": 2.6
+                },
+                "fibre": 6.7,
+                "sodium": 2
+            },
+            "category": "fats",
+            "subcategory": "Plant-Based fats",
+            "serving": 30
+        },
+        {
+            "id": 19,
+            "name": "Almonds",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 2409,
+                "protein": 21.2,
+                "fat": {
+                    "total": 49.4,
+                    "saturated": 3.7
+                },
+                "carbohydrate": {
+                    "total": 21.7,
+                    "sugars": 4.8
+                },
+                "fibre": 12.2,
+                "sodium": 1
+            },
+            "category": "fats",
+            "subcategory": "Plant-Based fats",
+            "serving": 30
+        },
+        {
+            "id": 20,
+            "name": "Eggs",
+            "unit": "egg",
+            "conversion": 0.665,
+            "nutrition": {
+                "energy": 650,
+                "protein": 12.6,
+                "fat": {
+                    "total": 10.6,
+                    "saturated": 3.3
+                },
+                "carbohydrate": {
+                    "total": 1.1,
+                    "sugars": 1.1
+                },
+                "fibre": 0,
+                "sodium": 124
+            },
+            "category": "proteins",
+            "subcategory": "Eggs",
+            "serving": 1
+        },
+        {
+            "id": 21,
+            "name": "Chicken Breast",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1650,
+                "protein": 31.0,
+                "fat": {
+                    "total": 3.6,
+                    "saturated": 1.0
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 74
+            },
+            "category": "proteins",
+            "subcategory": "Poultry",
+            "serving": 250
+        },
+        {
+            "id": 22,
+            "name": "Chicken Thigh",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1790,
+                "protein": 24.8,
+                "fat": {
+                    "total": 8.2,
+                    "saturated": 2.3
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 86
+            },
+            "category": "proteins",
+            "subcategory": "Poultry",
+            "serving": 250
+        },
+        {
+            "id": 23,
+            "name": "Chicken Wings",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 2030,
+                "protein": 30.5,
+                "fat": {
+                    "total": 8.1,
+                    "saturated": 2.3
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 82
+            },
+            "category": "proteins",
+            "subcategory": "Poultry",
+            "serving": 200
+        },
+        {
+            "id": 24,
+            "name": "Chicken Drumsticks",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1550,
+                "protein": 24.2,
+                "fat": {
+                    "total": 5.7,
+                    "saturated": 1.6
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 90
+            },
+            "category": "proteins",
+            "subcategory": "Poultry",
+            "serving": 200
+        },
+        {
+            "id": 25,
+            "name": "Ground Beef (80/20)",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1062,
+                "protein": 17.17,
+                "fat": {
+                    "total": 20.0,
+                    "saturated": 7.672
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 67
+            },
+            "category": "proteins",
+            "subcategory": "Beef",
+            "serving": 250
+        },
+        {
+            "id": 26,
+            "name": "Ground Pork",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1100,
+                "protein": 16.88,
+                "fat": {
+                    "total": 21.19,
+                    "saturated": 7.87
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 56
+            },
+            "category": "proteins",
+            "subcategory": "Pork",
+            "serving": 250
+        },
+        {
+            "id": 27,
+            "name": "Ribeye Steak",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1217,
+                "protein": 23.7,
+                "fat": {
+                    "total": 21.8,
+                    "saturated": 9.7
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 61
+            },
+            "category": "proteins",
+            "subcategory": "Beef",
+            "serving": 200
+        },
+        {
+            "id": 28,
+            "name": "Sirloin Steak",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 884,
+                "protein": 27.1,
+                "fat": {
+                    "total": 10.6,
+                    "saturated": 4.0
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 61
+            },
+            "category": "proteins",
+            "subcategory": "Beef",
+            "serving": 200
+        },
+        {
+            "id": 29,
+            "name": "T-Bone Steak",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1034,
+                "protein": 24.2,
+                "fat": {
+                    "total": 15.9,
+                    "saturated": 6.0
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 61
+            },
+            "category": "proteins",
+            "subcategory": "Beef",
+            "serving": 250
+        },
+        {
+            "id": 30,
+            "name": "Filet Mignon Beef (Tenderloin)",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 711,
+                "protein": 21.97,
+                "fat": {
+                    "total": 8.41,
+                    "saturated": 3.242
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 45
+            },
+            "category": "proteins",
+            "subcategory": "Beef",
+            "serving": 180
+        },
+        {
+            "id": 31,
+            "name": "New York Strip Beef Steak",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 874,
+                "protein": 32.59,
+                "fat": {
+                    "total": 7.44,
+                    "saturated": 3.27
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 61
+            },
+            "category": "proteins",
+            "subcategory": "Beef",
+            "serving": 200
+        },
+        {
+            "id": 32,
+            "name": "Pork Belly",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1970,
+                "protein": 9.3,
+                "fat": {
+                    "total": 22.0,
+                    "saturated": 8.0
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 73
+            },
+            "category": "proteins",
+            "subcategory": "Pork",
+            "serving": 200
+        },
+        {
+            "id": 33,
+            "name": "Pork Chops",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1330,
+                "protein": 22.0,
+                "fat": {
+                    "total": 5.0,
+                    "saturated": 1.5
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 50
+            },
+            "category": "proteins",
+            "subcategory": "Pork",
+            "serving": 200
+        },
+        {
+            "id": 34,
+            "name": "Pork Tenderloin",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1470,
+                "protein": 20.54,
+                "fat": {
+                    "total": 5.41,
+                    "saturated": 1.8
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 48
+            },
+            "category": "proteins",
+            "subcategory": "Pork",
+            "serving": 200
+        },
+        {
+            "id": 35,
+            "name": "Pork Scotch Fillet",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1450,
+                "protein": 23.0,
+                "fat": {
+                    "total": 6.0,
+                    "saturated": 2.0
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 46
+            },
+            "category": "proteins",
+            "subcategory": "Pork",
+            "serving": 200
+        },
+        {
+            "id": 36,
+            "name": "Salmon",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 870,
+                "protein": 22,
+                "fat": {
+                    "total": 6.5,
+                    "saturated": 1.8
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 50
+            },
+            "category": "proteins",
+            "subcategory": "Seafood",
+            "serving": 150
+        },
+        {
+            "id": 37,
+            "name": "Canned Tuna (in Oil)",
+            "unit": "can",
+            "conversion": 1.85,
+            "nutrition": {
+                "energy": 828,
+                "protein": 29.13,
+                "fat": {
+                    "total": 8.21,
+                    "saturated": 1.5
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 83
+            },
+            "category": "proteins",
+            "subcategory": "Seafood",
+            "serving": 1
+        },
+        {
+            "id": 38,
+            "name": "Canned Tuna (in Water)",
+            "unit": "can",
+            "conversion": 1.85,
+            "nutrition": {
+                "energy": 485,
+                "protein": 25,
+                "fat": {
+                    "total": 2.6,
+                    "saturated": 0.9
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 83
+            },
+            "category": "proteins",
+            "subcategory": "Seafood",
+            "serving": 1
+        },
+        {
+            "id": 39,
+            "name": "Squid Tubes (Frozen)",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 320,
+                "protein": 16.80,
+                "fat": {
+                    "total": 0.5,
+                    "saturated": 0.5
+                },
+                "carbohydrate": {
+                    "total": 1.80,
+                    "sugars": 0.5
+                },
+                "fibre": 0,
+                "sodium": 258
+            },
+            "category": "proteins",
+            "subcategory": "Seafood",
+            "serving": 200
+        },
+        {
+            "id": 40,
+            "name": "Ground Chicken",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1400,
+                "protein": 22.5,
+                "fat": {
+                    "total": 10.0,
+                    "saturated": 2.5
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 200
+            },
+            "category": "proteins",
+            "subcategory": "Poultry",
+            "serving": 250
+        },
+        {
+            "id": 41,
+            "name": "Mozzarella (Shredded)",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1100,
+                "protein": 25.7,
+                "fat": {
+                    "total": 14.1,
+                    "saturated": 9.9
+                },
+                "carbohydrate": {
+                    "total": 8.3,
+                    "sugars": 1.0
+                },
+                "fibre": 0,
+                "sodium": 446
+            },
+            "category": "proteins",
+            "subcategory": "Cheeses",
+            "serving": 50
+        },
+        {
+            "id": 42,
+            "name": "Parmesan (Shredded)",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1550,
+                "protein": 32,
+                "fat": {
+                    "total": 27.1,
+                    "saturated": 18.8
+                },
+                "carbohydrate": {
+                    "total": 0.5,
+                    "sugars": 0.5
+                },
+                "fibre": 0,
+                "sodium": 1010
+            },
+            "category": "proteins",
+            "subcategory": "Cheeses",
+            "serving": 50
+        },
+        {
+            "id": 43,
+            "name": "Almond Flour",
+            "unit": "cup",
+            "conversion": 0.96,
+            "nutrition": {
+                "energy": 2540.0,
+                "protein": 20.40,
+                "fat": {
+                    "total": 55.50,
+                    "saturated": 3.30
+                },
+                "carbohydrate": {
+                    "total": 3.90,
+                    "sugars": 3.90
+                },
+                "fibre": 8.90,
+                "sodium": 5.00
+            },
+            "category": "fats",
+            "subcategory": "Plant-Based fats",
+            "serving": 0.25
+        },
+        {
+            "id": 44,
+            "name": "Pasta Sauce (Tomato)",
+            "unit": "cup",
+            "conversion": 1.32,
+            "nutrition": {
+                "energy": 247.0,
+                "protein": 1.60,
+                "fat": {
+                    "total": 1.30,
+                    "saturated": 1.00
+                },
+                "carbohydrate": {
+                    "total": 9.30,
+                    "sugars": 6.20
+                },
+                "fibre": 2.3,
+                "sodium": 234.00
+            },
+            "category": "carbohydrates",
+            "subcategory": "Vegetables & Starches",
+            "serving": 0.25
+        },
+        {
+            "id": 45,
+            "name": "Pasta Sauce (Tomato)",
+            "unit": "cup",
+            "conversion": 1.32,
+            "nutrition": {
+                "energy": 247.0,
+                "protein": 1.60,
+                "fat": {
+                    "total": 1.30,
+                    "saturated": 1.00
+                },
+                "carbohydrate": {
+                    "total": 9.30,
+                    "sugars": 6.20
+                },
+                "fibre": 2.3,
+                "sodium": 234.00
+            },
+            "category": "carbohydrates",
+            "subcategory": "Vegetables & Starches",
+            "serving": 0.25
+        },
+        {
+            "id": 46,
+            "name": "Whey Protein Isolate",
+            "unit": "scoop",
+            "conversion": 0.3,
+            "nutrition": {
+                "energy": 459,
+                "protein": 25,
+                "fat": {
+                    "total": 0.3,
+                    "saturated": 0.2
+                },
+                "carbohydrate": {
+                    "total": 0.9,
+                    "sugars": 0.6
+                },
+                "fibre": 0.7,
+                "sodium": 39.00
+            },
+            "category": "supplements",
+            "subcategory": "Protein Powder",
+            "serving": 2
+        },
+        {
+            "id": 47,
+            "name": "Middle Bacon",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 1030,
+                "protein": 15.10,
+                "fat": {
+                    "total": 20.40,
+                    "saturated": 8.20
+                },
+                "carbohydrate": {
+                    "total": 1.20,
+                    "sugars": 1
+                },
+                "fibre": 0.0,
+                "sodium": 1000.00
+            },
+            "category": "fats",
+            "subcategory": "Fatty Meats",
+            "serving": 30
+        },
+        {
+            "id": 48,
+            "name": "Prawns (Frozen)",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 369.00,
+                "protein": 20.40,
+                "fat": {
+                    "total": 0.6,
+                    "saturated": 0.2
+                },
+                "carbohydrate": {
+                    "total": 1,
+                    "sugars": 1
+                },
+                "fibre": 0,
+                "sodium": 533.00
+            },
+            "category": "proteins",
+            "subcategory": "Seafood",
+            "serving": 200
+        },
+        {
+            "id": 49,
+            "name": "Sesame Oil",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 3404.00,
+                "protein": 92.0,
+                "fat": {
+                    "total": 92.0,
+                    "saturated": 14.8
+                },
+                "carbohydrate": {
+                    "total": 0,
+                    "sugars": 0
+                },
+                "fibre": 0,
+                "sodium": 0
+            },
+            "category": "fats",
+            "subcategory": "Plant-Based fats",
+            "serving": 10
+        }
+    ],
+    "exclusions": {
+        "seasoning": [
+            "Salt",
+            "Black pepper",
+            "Oregano",
+            "Thyme",
+            "Rosemary",
+            "Sage",
+            "Dill",
+            "Mint",
+            "Tumeric",
+            "Paprika",
+            "Smoked paprika",
+            "Cumin",
+            "Cinnamon",
+            "Cayenne Pepper",
+            "Nutmeg",
+            "Cloves",
+            "Ginger",
+            "Garlic",
+            "Mustard powder",
+            "Parsley",
+            "Coriander",
+            "Basil",
+            "Bay Leaves",
+            "Garlic Powder",
+            "Onion Powder"
+        ],
+        "vegetables": [
+            "Cucumbers",
+            "Tomatoes",
+            "Capcicum",
+            "Zucchini",
+            "Mushrooms",
+            "Celery",
+            "Radishes",
+            "Lettuce",
+            "Spinach",
+            "Kale/Arugula/Chard",
+            "Cabbage",
+            "Brussels Sprouts",
+            "Spring onions",
+            "Endives",
+            "Onions",
+            "Cauliflower",
+            "Broccoli/Broccolini",
+            "Bok Choy/Chinese Cabbage",
+            "Mixed Leaves"
+        ],
+        "condiments": [
+            "Apple Cider Vinegar",
+            "Vinegar",
+            "Hot sauce (no sugar)",
+            "Soy sauce",
+            "Lemon/lime juice",
+            "Ketchup (Keto)",
+            "BBQ Sauce (Keto)",
+            "Mustard"
+        ],
+        "drinks": [
+            "Soda water",
+            "Black coffee",
+            "Tea",
+            "Kombucha"
+        ],
+        "miscellaneous": [
+            "Stevia",
+            "Monk fruit extract",
+            "Erythritol",
+            "Gelatin",
+            "Konjac",
+            "Yeast",
+            "Pickles",
+            "Fermented vegetables"
+        ]
+    }
+}
