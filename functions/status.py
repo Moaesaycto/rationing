@@ -45,7 +45,10 @@ def generate_status(name):
 
 
 def save_status_report(string):
-    os.makedirs("output", exist_ok=True)
-    with open(get_resource_path(f"{OUTPUT_DIRECTORY_PATH}/{REPORT_FILE_NAME}"), "w", encoding="utf-8") as file:
+    output_dir = os.path.join(os.path.abspath("."), OUTPUT_DIRECTORY_PATH)
+    os.makedirs(output_dir, exist_ok=True)
+
+    file_path = os.path.join(output_dir, REPORT_FILE_NAME)
+    with open(file_path, "w", encoding="utf-8") as file:
         file.write(string)
-    return True
+
