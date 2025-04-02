@@ -1149,6 +1149,29 @@
             "category": "fats",
             "subcategory": "Plant-Based fats",
             "serving": 10
+        },
+        {
+            "id": 50,
+            "name": "Gelatin",
+            "unit": "g",
+            "conversion": 0.01,
+            "nutrition": {
+                "energy": 459,
+                "protein": 25,
+                "fat": {
+                    "total": 0.3,
+                    "saturated": 0.2
+                },
+                "carbohydrate": {
+                    "total": 0.9,
+                    "sugars": 0.6
+                },
+                "fibre": 0.7,
+                "sodium": 39.00
+            },
+            "category": "supplements",
+            "subcategory": "Gelatin",
+            "serving": 10
         }
     ],
     "exclusions": {

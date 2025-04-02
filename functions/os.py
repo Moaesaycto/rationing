@@ -149,6 +149,12 @@ def extract_number(s):
         return None
 
 
+def numeric_input(prompt):
+    while not is_valid_number(value := typed_input(prompt)):
+        continue
+    return extract_number(value)
+
+
 def menu_prompt(options, title="option", mode="text", return_key="title"):
     prompt = f"{Fore.MAGENTA}RC Console:{Fore.RESET} Choose {title}:\n"
     options = sorted(options, key=lambda x: x["title"].lower())
@@ -194,3 +200,34 @@ def get_resource_path(relative_path):
     if hasattr(sys, '_MEIPASS'):
         return os.path.join(sys._MEIPASS, relative_path)
     return os.path.join(os.path.abspath("."), relative_path)
+
+
+# -------------------------- #
+#      STRING RENDERERS      #
+# -------------------------- #
+
+def render_progress_bar(
+    progress,
+    total,
+    length=30,
+    filled_char="█",
+    partial_chars="▓▒░",  # "▉▊▋▌▍▎▏",
+    empty_char="░",
+    show_percent=True,
+    prefix="",
+    suffix=""
+):
+    if total <= 0:
+        raise ValueError("Total must be greater than 0")
+    progress = max(0, min(progress, total))
+    ratio = progress / total
+    full_blocks = int(length * ratio)
+    partial_index = int((length * ratio - full_blocks) * len(partial_chars))
+    bar = filled_char * full_blocks + (partial_chars[partial_index - 1] if 0 < partial_index < len(
+        partial_chars) else "") + empty_char * (length - full_blocks - (1 if 0 < partial_index < len(partial_chars) else 0))
+    return f"{prefix}[{bar}]{f' {int(ratio * 100)}%' if show_percent else ''}{suffix}"
+
+
+def create_title(string):
+    title_len = len(max(string.split("\n"), key=len))
+    return f"title length = {title_len}"

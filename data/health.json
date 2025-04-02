@@ -1,0 +1,52 @@
+{
+    "supplements": [
+        {
+            "id": 1,
+            "title": "Multivitamin",
+            "form": "Tablet",
+            "dose": "1 tablet",
+            "time": "Morning",
+            "nutrients": [
+                "Vitamins A-K",
+                "B-Complex",
+                "Zinc",
+                "Magnesium",
+                "Selenium",
+                "Chromium"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Pharma Mag Forte",
+            "form": "Tablet",
+            "dose": "1 tablet",
+            "time": "Afternoon or Evening",
+            "nutrients": [
+                "Magnesium",
+                "Potassium",
+                "Calcium"
+            ]
+        }
+    ],
+    "notes": [
+        {
+            "id": 1,
+            "title": "Collagen Supplements",
+            "description": "Use 10g gelatin daily instead of collagen powder; included in rations."
+        },
+        {
+            "id": 2,
+            "title": "Fish Oil",
+            "description": "Omitted-covered by tuna, salmon, prawn in rations (2-3 times/week)."
+        },
+        {
+            "id": 3,
+            "title": "Magnesium & Potassium",
+            "description": "1 tab Pharma Mag Forte + spinach/avocado covers daily needs."
+        }
+    ],
+    "stats": {
+        "starting_weight": 160,
+        "goal_weight": 100
+    }
+}

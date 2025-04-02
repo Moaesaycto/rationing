@@ -5,12 +5,12 @@ def random_ending(name):
     return random.choice([
         f"Is there anything else I can do for you?",
         f"Can I assist you with something else?",
-        f"Do you need help with anything else, {name}?",
+        f"Do you need help with anything else?",
         f"Let me know if there's anything else you'd like!",
         f"Is there another task I can help with?",
-        f"Anything else you'd like to check, {name}?",
+        f"Anything else you'd like to check?",
         f"Feel free to ask if you need anything else!",
-        f"Do you have any other requests, {name}?",
+        f"Do you have any other requests?",
         f"I'm here if you need further assistance!",
         f"Let me know if there's more I can do for you!"
     ])

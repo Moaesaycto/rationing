@@ -3,7 +3,7 @@ import json
 from time import sleep
 from colorama import Fore
 from functions.helpers import random_ending
-from functions.os import extract_number, is_valid_number, loading_ellipsis, menu_prompt, typed_print, get_resource_path, typed_input
+from functions.os import extract_number, is_valid_number, loading_ellipsis, menu_prompt, typed_print, get_resource_path, typed_input, numeric_input
 from options import WORKOUT_CONSOLE_PREFIX, USER_PREFIX
 from datetime import date
 from tabulate import tabulate
@@ -17,6 +17,34 @@ DAY = None
 WEEK = None
 WEIGHT = 160
 MAX_WEIGHT = 160
+
+
+def init(name):
+    global NAME
+    NAME = name
+    typed_print(
+        f"{WORKOUT_CONSOLE_PREFIX}Initializing exercise server", newline=False)
+    loading_ellipsis(length=1, sleep_for=0.3)
+    with open(get_resource_path("data/workout.json"), "r") as file:
+        data = json.load(file)
+
+    global STRENGTH_WORKOUTS, GROWTH_WORKOUTS, CARDIO_WORKOUTS
+    STRENGTH_WORKOUTS = data["strength"]
+    GROWTH_WORKOUTS = data["growth"]
+    CARDIO_WORKOUTS = data["cardio"]
+    loading_ellipsis(length=1, sleep_for=0.3)
+
+    global DAY, WEEK
+    today = date.today()
+    WEEK = today.isocalendar().week % 2
+    DAY = today.strftime("%A")
+
+    loading_ellipsis(length=1, sleep_for=0.3)
+    print()
+    typed_print(
+        f"{WORKOUT_CONSOLE_PREFIX}Exercise server set up!")
+    sleep(0.3)
+    print()
 
 
 def end_workout_string(name):
@@ -69,7 +97,7 @@ def get_workout():
         Fore.RESET + f"{cardio['title']}: {cardio_info}"
 
     # Combine all sections into a single string
-    workout_summary = f"{strength_section}\n\n{growth_section}\n\n{cardio_section}\n"
+    workout_summary = f"{strength_section}\n{growth_section}\n{cardio_section}\n"
     typed_print(workout_summary)
 
 
@@ -100,32 +128,6 @@ def show_workout_help():
 
 
 def run_workout_prompt(name):
-    global NAME
-    NAME = name
-    typed_print(
-        f"{WORKOUT_CONSOLE_PREFIX}Initializing exercise server", newline=False)
-    loading_ellipsis(length=1, sleep_for=0.3)
-    with open(get_resource_path("data/workout.json"), "r") as file:
-        data = json.load(file)
-
-    global STRENGTH_WORKOUTS, GROWTH_WORKOUTS, CARDIO_WORKOUTS
-    STRENGTH_WORKOUTS = data["strength"]
-    GROWTH_WORKOUTS = data["growth"]
-    CARDIO_WORKOUTS = data["cardio"]
-    loading_ellipsis(length=1, sleep_for=0.3)
-
-    global DAY, WEEK
-    today = date.today()
-    WEEK = today.isocalendar().week % 2
-    DAY = today.strftime("%A")
-
-    loading_ellipsis(length=1, sleep_for=0.3)
-    print()
-    typed_print(
-        f"{WORKOUT_CONSOLE_PREFIX}Exercise server set up!")
-    sleep(0.3)
-    print()
-
     mode = menu_prompt([
         {"title": "workout", "description": "Get today's workout"},
         {"title": "help", "description": "Learn the regiment"}
@@ -136,16 +138,16 @@ def run_workout_prompt(name):
 
     if mode == "workout":
         global WEIGHT
-        while not is_valid_number(WEIGHT := typed_input(f"{WORKOUT_CONSOLE_PREFIX}Enter your current weight\n{USER_PREFIX}")):
-            pass
-        WEIGHT = extract_number(WEIGHT)
-        get_workout()
+        WEIGHT = numeric_input(f"{WORKOUT_CONSOLE_PREFIX}Enter your current weight\n{USER_PREFIX}")
+        workout = get_workout()
+        typed_print(workout)
 
     elif mode == "help":
         show_workout_help()
 
 
 def run_workout_loop(name):
+    init(name)
     while True:
         run_workout_prompt(name)
 
@@ -155,9 +157,9 @@ def run_workout_loop(name):
         if again not in ("y", "yes"):
             print()
             typed_print(
-                f"{WORKOUT_CONSOLE_PREFIX}Shutting down recipe module", newline=False)
+                f"{WORKOUT_CONSOLE_PREFIX}Shutting down exercise server", newline=False)
             loading_ellipsis(length=3, sleep_for=0.5)
-            print()
+            print("\n")
             break
 
     return end_workout_string(name)

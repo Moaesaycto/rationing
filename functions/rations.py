@@ -100,9 +100,9 @@ def generate_ingredients():
     exclusions = sorted(
         RNG.sample(
             [v for v in raw_exclusions["vegetables"]
-             if v not in IGNORED_EXCLUSIONS + ["Onions", "Cucumbers", "Tomatoes", "Mixed Leaves"]],
+             if v not in IGNORED_EXCLUSIONS + ["Onions", "Cucumbers", "Tomatoes", "Mixed Leaves", "Spinach"]],
             4
-        ) + ["Onions", "Cucumbers", "Tomatoes", "Mixed Leaves"]
+        ) + ["Onions", "Cucumbers", "Tomatoes", "Mixed Leaves", "Spinach"]
     )
 
     all_ingredients = sorted(
@@ -135,6 +135,7 @@ def get_fixed_ingredients():
         {"id": 44, "servings": 2},   # Pasta Sauce
         {"id": 20, "servings": 24},  # Eggs
         {"id": 46, "servings": 7},   # Protein Powder
+        {"id": 50, "servings": 7},
         {"id": RNG.choice([i["id"] for i in INGREDIENTS if i["subcategory"]
                           == "Dairy-Based fats"]), "servings": 3},
         {"id": RNG.choice([i["id"] for i in INGREDIENTS if i["subcategory"]

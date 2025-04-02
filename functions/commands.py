@@ -1,5 +1,6 @@
 import random
 from difflib import SequenceMatcher
+from functions.health import run_health
 from functions.workout import run_workout_loop
 from functions.helpers import random_ending
 from functions.os import clear_console
@@ -73,7 +74,8 @@ COMMANDS = {
             "I need more food", "can you change my food?", "I want to see my supplies",
             "update the stuff I'm eating", "let's change my meals", "what food do I have?",
             "check food inventory", "food stock", "ration status", "food supplies",
-            "current rations", "food tracker", "ration log", "food list", "ration details", "rations please"
+            "current rations", "food tracker", "ration log", "food list", "ration details", "rations please",
+            "sort out rations"
         ],
         "execute": lambda: update_rations(NAME)
     },
@@ -110,6 +112,20 @@ COMMANDS = {
             "get lifting plan", "get my fitness plan", "what's my gym plan?", "open training"
         ],
         "execute": lambda: run_workout_loop(NAME)
+    },
+    "health": {
+        "triggers": [
+            "health", "vitamins", "goals", "health update", "health report", "health check", "check my health", "health status", "track my health",
+            "show health info", "health summary", "daily health check-in", "wellness report", "health dashboard", "get wellness summary",
+            "show my supplements", "supplement list", "vitamin info", "what supplements am I taking?", "list my vitamins",
+            "what vitamins do I take?", "daily vitamins", "what's my supplement stack?", "nutrition info", "supplement details",
+            "weight progress", "weight update", "track my weight", "how's my weight?", "weight report", "check weight loss",
+            "how much weight have I lost?", "am I making health progress?", "progress update", "weight tracking",
+            "health notes", "show health notes", "any health notes?", "view health goals", "my health goals",
+            "check physical health", "health insights", "update on my health", "how's my body doing?", "wellness data"
+
+        ],
+        "execute": lambda: run_health(NAME)
     },
     "clear": {
         "triggers": [
