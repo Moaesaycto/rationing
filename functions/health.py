@@ -3,13 +3,10 @@ from time import sleep
 import random
 import json
 from itertools import chain
-from colorama import Fore
-from tabulate import tabulate
 
 from functions.helpers import random_ending
 from functions.os import (
     get_resource_path,
-    hr,
     numeric_input,
     pad_between,
     render_progress_bar,

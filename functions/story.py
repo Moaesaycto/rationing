@@ -1,5 +1,4 @@
 from datetime import datetime
-import random
 from time import sleep
 from colorama import init, Fore, Style
 

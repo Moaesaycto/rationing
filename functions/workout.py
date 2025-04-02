@@ -3,11 +3,10 @@ import json
 from time import sleep
 from datetime import date, timedelta
 from colorama import Fore
-from tabulate import tabulate
 
 from functions.helpers import random_ending
 from functions.os import (
-    extract_number, is_valid_number, loading_ellipsis,
+    loading_ellipsis,
     menu_prompt, typed_print, get_resource_path,
     typed_input, numeric_input, subtitle
 )

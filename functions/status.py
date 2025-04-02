@@ -2,7 +2,7 @@ from functions.health import get_health_report
 from functions.workout import get_workout_string
 from functions.rations import get_todays_rations_string
 from options import MAIN_CONSOLE_PREFIX, OUTPUT_DIRECTORY_PATH, REPORT_FILE_NAME, TITLE_BORDER, TITLE_PADDING, ANSI_ESCAPE_PATTERN, USER_PREFIX 
-from functions.os import loading_ellipsis, get_resource_path, create_title, hr, numeric_input, pad_between, subtitle, typed_print
+from functions.os import loading_ellipsis, create_title, hr, numeric_input, pad_between, subtitle, typed_print
 from datetime import datetime, date
 import os
 from uuid import uuid4

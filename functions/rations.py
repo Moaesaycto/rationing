@@ -1,12 +1,7 @@
 from textwrap import wrap
-from tabulate import tabulate
 import json
 import random
-import sys
-import os
 from datetime import date
-from time import sleep
-from colorama import Fore, Style
 
 from options import DEFAULT_WIDTH, RATIONS_CONSOLE_PREFIX
 from functions.helpers import random_ending, random_food_ending
