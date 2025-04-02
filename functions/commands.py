@@ -1,5 +1,6 @@
 import random
 from difflib import SequenceMatcher
+from functions.status import generate_status
 from functions.health import run_health
 from functions.workout import run_workout_loop
 from functions.helpers import random_ending
@@ -126,6 +127,22 @@ COMMANDS = {
 
         ],
         "execute": lambda: run_health(NAME)
+    },
+    "status": {
+        "triggers": [
+            "status", "generate status", "daily update", "show me a summary", "give me a rundown",
+            "what's the update?", "report please", "system report", "how am I doing?", "how's everything?",
+            "daily report", "give me my status", "show status", "status report", "overview", "status check",
+            "summary", "update summary", "generate report", "daily log", "current state", "where am I at?",
+            "progress report", "quick update", "update me", "where do I stand?", "give me an overview",
+            "how's today looking?", "what's going on?", "show my progress", "check status", "brief me",
+            "recap", "tell me my status", "any updates?", "summary report", "overall progress", "system update",
+            "status rundown", "daily dashboard", "log update", "daily insights", "today's report", "what's my progress?",
+            "fetch report", "overview please", "log status", "report status", "print status", "show everything",
+            "how's my day?", "review my day", "where am I?", "summarise the day", "summarise everything",
+            "what's going on with me?", "summarise it all", "current overview", "daily sync", "health + progress summary"
+        ],
+        "execute": lambda: generate_status(NAME)
     },
     "clear": {
         "triggers": [

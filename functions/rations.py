@@ -1,3 +1,5 @@
+from textwrap import wrap
+from tabulate import tabulate
 import json
 import random
 import sys
@@ -6,9 +8,9 @@ from datetime import date
 from time import sleep
 from colorama import Fore, Style
 
-from options import RATIONS_CONSOLE_PREFIX
+from options import DEFAULT_WIDTH, RATIONS_CONSOLE_PREFIX
 from functions.helpers import random_ending, random_food_ending
-from functions.os import get_resource_path, loading_ellipsis, menu_prompt, typed_input, typed_print
+from functions.os import get_resource_path, hr, loading_ellipsis, menu_prompt, pad_between, subtitle, typed_input, typed_print
 
 # ----------------------------- #
 #          CONSTANTS            #
@@ -138,8 +140,7 @@ def get_fixed_ingredients():
         {"id": 50, "servings": 7},
         {"id": RNG.choice([i["id"] for i in INGREDIENTS if i["subcategory"]
                           == "Dairy-Based fats"]), "servings": 3},
-        {"id": RNG.choice([i["id"] for i in INGREDIENTS if i["subcategory"]
-                          == "Plant-Based fats"]), "servings": 2},
+        {"id": 13, "servings": 2},
         *[
             {"id": cid, "servings": 4}
             for cid in RNG.sample([i["id"] for i in INGREDIENTS if i["subcategory"] == "Cheeses"], 2)
@@ -218,29 +219,65 @@ def render_ingredients(data):
     daily_energy = energy_kj / DAYS_PER_WEEK
     daily_protein = data["protein"]["total"] / DAYS_PER_WEEK
 
-    protein_rows = get_ingredient_table(data["protein"]["ingredients"])
-    non_protein_rows = get_ingredient_table(data["non_protein"])
+    # Define column widths (must sum to DEFAULT_WIDTH)
+    col_widths = [int(DEFAULT_WIDTH * p) for p in [0.35, 0.1, 0.25, 0.3]]
 
-    def format_section(title, rows):
-        header = f"{'Ingredient':<30} {'Servings':<10} {'Serving Size':<20} {'Total Weight':<15}"
-        lines = [
-            f"\n{Fore.YELLOW}{Style.BRIGHT}{title}{Style.RESET_ALL}",
-            f"{Fore.YELLOW}{'-' * len(title)}{Style.RESET_ALL}",
-            f"{Fore.YELLOW}{header}{Style.RESET_ALL}",
-            f"{Fore.YELLOW}{'-' * len(header)}{Style.RESET_ALL}",
+    def pad_cell(content, width, align="left"):
+        content = str(content)
+        if len(content) > width:
+            return content[:width]
+        if align == "center":
+            return content.center(width)
+        elif align == "right":
+            return content.rjust(width)
+        return content.ljust(width)
+
+    def format_section(title, ingredients_list):
+        rows = []
+        for ing in filter(None, ingredients_list):
+            total_weight = round(
+                ing["servings"] * ing["serving"] * ing["conversion"] * 100)
+            row = [
+                pad_cell(ing["name"], col_widths[0], "left"),
+                pad_cell(ing["servings"], col_widths[1], "center"),
+                pad_cell(format_serving(
+                    ing["serving"], ing["units"]), col_widths[2], "center"),
+                pad_cell(f"{total_weight} g", col_widths[3], "right"),
+            ]
+            rows.append("".join(row))
+
+        # Header
+        headers = [
+            pad_cell("Ingredient", col_widths[0], "left"),
+            pad_cell("Servings", col_widths[1], "center"),
+            pad_cell("Serving Size", col_widths[2], "center"),
+            pad_cell("Total Weight", col_widths[3], "right"),
         ]
-        for name, servings, size, weight in rows:
-            lines.append(f"{name:<30} {servings:<10} {size:<20} {weight:<15}")
-        return "\n".join(lines)
+        header_line = "".join(headers)
+        underline = "-" * DEFAULT_WIDTH
 
+        section_title = subtitle(title, top=False)
+        return section_title + "\n" + header_line + "\n" + underline + "\n" + "\n".join(rows)
+
+
+    exclusions = [str(x) for x in data["exclusions"]]
+    line = f"{', '.join(exclusions[:-1])} and {exclusions[-1]}"
+    wrapped = "\n".join(wrap(line, DEFAULT_WIDTH))
     summary = [
-        f"{Fore.YELLOW}Total Energy:{Style.RESET_ALL}        {Style.BRIGHT}{energy_kj:.2f} kJ{Style.RESET_ALL} ({energy_cal:.2f} cal)",
-        f"{Fore.YELLOW}Daily Energy:{Style.RESET_ALL}        {Style.BRIGHT}{daily_energy:.2f} kJ{Style.RESET_ALL} ({daily_energy / 4.184:.2f} cal)",
-        f"{Fore.YELLOW}Total Protein:{Style.RESET_ALL}       {Style.BRIGHT}{data['protein']['total']:.2f} g{Style.RESET_ALL} ({daily_protein:.2f} g/day)",
-        f"{Fore.YELLOW}Total Carbohydrates:{Style.RESET_ALL} {Style.BRIGHT}{data['carbohydrate']:.2f} g{Style.RESET_ALL}",
-        format_section("Protein Ingredients", protein_rows),
-        format_section("Non-Protein Ingredients", non_protein_rows),
-        f"\n{Fore.YELLOW}Unlimited:{Style.RESET_ALL} {', '.join(data['exclusions'][:-1])} and {data['exclusions'][-1]}"
+        pad_between(f"Total Energy: ", f" {energy_kj:.2f} kJ ({energy_cal:.2f} cal)"),
+        pad_between(f"Daily Energy: ", f" {daily_energy:.2f} kJ ({daily_energy / 4.184:.2f} cal)"),
+        pad_between(f"Total Protein: ", f" {data['protein']['total']:.2f} g ({daily_protein:.2f} g/day)"),
+        pad_between(f"Total Carbohydrates: ", f" {data['carbohydrate']:.2f} g"),
+        format_section("Restricted Rations", data["protein"]["ingredients"] + data["non_protein"]),
+        "\n" + subtitle("Unlimited Rations", top=False) + wrapped,
+        hr()
     ]
 
     return "\n".join(summary)
+
+
+def get_todays_rations_string(name, offset=0):
+    year, week, _ = date.today().isocalendar()
+    seed = int(f"{year}{week:02d}") + offset
+    rng = random.Random(seed)
+    return render_ingredients(get_ingredients(rng))

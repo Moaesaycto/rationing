@@ -1,24 +1,51 @@
-from options import OUTPUT_DIRECTORY_PATH, REPORT_FILE_NAME
-from functions.os import get_resource_path
-from datetime import datetime
+from functions.health import get_health_report
+from functions.workout import get_workout_string
+from functions.rations import get_todays_rations_string
+from options import MAIN_CONSOLE_PREFIX, OUTPUT_DIRECTORY_PATH, REPORT_FILE_NAME, TITLE_BORDER, TITLE_PADDING, ANSI_ESCAPE_PATTERN, USER_PREFIX 
+from functions.os import loading_ellipsis, get_resource_path, create_title, hr, numeric_input, pad_between, subtitle, typed_print
+from datetime import datetime, date
 import os
+from uuid import uuid4
+import re
+from functions.helpers import random_ending
 
-def create_title(string):
-    title_len = len(max(string.split("\n"), key=len))
-    return f"title length = {title_len}"
+TITLE_WIDTH = 78
+TOTAL_WIDTH = TITLE_WIDTH + TITLE_BORDER[0] + TITLE_PADDING[0]
 
-def generate_status():
+SPECS = [
+    ["Report generated at: ", " " + str(datetime.now())],
+    ["Authorized by: ", " F. BAKARR (Proxy)"],
+    ["Report ID ", " " + str(uuid4())]
+]
+
+def generate_status(name):
     report = ""
-    report += f"Report generated at: {str(datetime.now())}"
+
+    test_string = f"STATUS REPORT FOR: {date.today().strftime('%A, %B %d, %Y')}"
+    report += create_title(test_string, width=TITLE_WIDTH) + "\n"
+    report += subtitle("REPORT SPECIFICATIONS", width=TOTAL_WIDTH)
+    report += "\n".join([pad_between(s[0], s[1], width=TOTAL_WIDTH, delim=".") for s in SPECS]) + "\n"
+    report += hr(width=TOTAL_WIDTH) + "\n"
+    report += subtitle("WEEKLY RATIONS", width=TOTAL_WIDTH)
     
-    print(create_title("Hello\nWorldybeings"))
+    weight = numeric_input(f"{MAIN_CONSOLE_PREFIX}To get your report, please enter your current weight:\n{USER_PREFIX}")
+    
+    typed_print(f"{MAIN_CONSOLE_PREFIX}Generating your report now", newline=False)
+    loading_ellipsis()
+    print()
+    
+    report += ANSI_ESCAPE_PATTERN.sub('', get_todays_rations_string(name))
+    report += "\n"*2
+    report += ANSI_ESCAPE_PATTERN.sub('', get_workout_string(name, weight))
+    report += "\n"*2
+    report += ANSI_ESCAPE_PATTERN.sub('', get_health_report(name, weight))
+    
     save_status_report(report)
+    return "Report successfully generated! " + random_ending(name)
+
 
 def save_status_report(string):
     os.makedirs("output", exist_ok=True)
-    with open(get_resource_path(f"{OUTPUT_DIRECTORY_PATH}/{REPORT_FILE_NAME}"), "w") as file:
+    with open(get_resource_path(f"{OUTPUT_DIRECTORY_PATH}/{REPORT_FILE_NAME}"), "w", encoding="utf-8") as file:
         file.write(string)
     return True
-
-if __name__ == "__main__":
-    generate_status()

@@ -4,7 +4,8 @@ import time
 import threading
 import re
 from colorama import Fore
-from options import TYPING_DELAY, ANSI_ESCAPE_PATTERN
+from options import DEFAULT_WIDTH, TYPING_DELAY, ANSI_ESCAPE_PATTERN, TITLE_PADDING, TITLE_BORDER, TITLE_DELIMITER
+from textwrap import wrap
 
 # ----------------------------- #
 #         GLOBAL CONFIG         #
@@ -67,6 +68,8 @@ start_skip_listener()
 
 
 def typed_print(text, delay=TYPING_DELAY, newline=True, skippable=True):
+    if not text:
+        return
     global skip_typing, listen_for_skip
     skip_typing = False
     listen_for_skip = skippable
@@ -228,6 +231,30 @@ def render_progress_bar(
     return f"{prefix}[{bar}]{f' {int(ratio * 100)}%' if show_percent else ''}{suffix}"
 
 
-def create_title(string):
-    title_len = len(max(string.split("\n"), key=len))
-    return f"title length = {title_len}"
+def create_title(string, width=None):
+    secs = wrap(string, width) if width else string.split("\n")
+
+    px, py = TITLE_PADDING
+    bx, by = TITLE_BORDER
+    d = TITLE_DELIMITER
+
+    g = width if width else len(max(secs, key=len)) + 2 * px
+    n = g + 2 * bx * len(d)
+
+    tb = [d * n] * by + [f"{' ' * g}".join([d * bx] * 2)] * py
+    body = [f"{d * bx}{s.center(g)}{d * bx}" for s in secs]
+
+    return "\n".join(tb + body + tb[::-1])
+
+
+def pad_between(left, right, width=DEFAULT_WIDTH, delim="."):
+    pad_len = max(0, width - len(left) - len(right))
+    return f"{left}{delim * pad_len}{right}"
+
+
+def subtitle(string, width=DEFAULT_WIDTH, delim="_", top=True):
+    return (hr(new_line=False, width=width) + "\n" if top else "") + f" {string} ".center(width, delim) + "\n"
+
+
+def hr(new_line=True, width=DEFAULT_WIDTH):
+    return f"{"_"*width}" + ("\n" if new_line else "")
