@@ -14,7 +14,7 @@ from functions.os import (
     typed_print,
     loading_ellipsis
 )
-from options import HEALTH_CONSOLE_PREFIX, USER_PREFIX, DEFAULT_WIDTH
+from options import HEALTH_CONSOLE_PREFIX, USER_PREFIX, DEFAULT_WIDTH, MAX_WEIGHT, GOAL_WEIGHT
 
 # Globals
 SUPPLEMENTS = []
@@ -149,8 +149,8 @@ def get_supplements_section():
 
 def get_progress_section(weight):
     init_health(NAME)
-    start = STATS["starting_weight"]
-    goal = STATS["goal_weight"]
+    start = MAX_WEIGHT
+    goal = GOAL_WEIGHT
     lost = start - weight
     target = start - goal
     bar = render_progress_bar(
