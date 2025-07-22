@@ -159,7 +159,7 @@ def numeric_input(prompt):
 
 
 def menu_prompt(options, title="option", mode="text", return_key="title"):
-    prompt = f"{Fore.MAGENTA}RC Console:{Fore.RESET} Choose {title}:\n"
+    prompt = f"{Fore.MAGENTA}RC Console:{Fore.RESET} Choose {title}{" (enter number)" if mode == "index" else ""}:\n"
     options = sorted(options, key=lambda x: x["title"].lower())
     option_map = {}
 
@@ -208,18 +208,22 @@ def get_resource_path(relative_path):
 # -------------------------- #
 #      STRING RENDERERS      #
 # -------------------------- #
+# Useful bank:
+# filled_char="█",
+# partial_chars="▓▒░" OR  "▉▊▋▌▍▎▏"
+# empty_char="░"
 
 def render_progress_bar(
     progress,
     total,
     length=30,
-    filled_char="█",
-    partial_chars="▓▒░",  # "▉▊▋▌▍▎▏",
-    empty_char="░",
+    filled_char="Ξ",
+    partial_chars="=-",
+    empty_char=" ",
     show_percent=True,
     prefix="",
     suffix=""
-):
+) -> str:
     if total <= 0:
         raise ValueError("Total must be greater than 0")
     progress = max(0, min(progress, total))

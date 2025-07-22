@@ -38,7 +38,8 @@ COMMANDS = {
             f"Take it easy, {NAME}!",
             f"Later, {NAME}!",
             f"Goodbye and good luck, {NAME}!"
-        ])
+        ]),
+        "description": "Exit the program.",
     },
     "greet": {
         "triggers": [
@@ -60,7 +61,8 @@ COMMANDS = {
             f"What's up, {NAME}?",
             f"Hiya, {NAME}!",
             f"Hey there, {NAME}!"
-        ])
+        ]),
+        "description": "Say hello to the assistant.",
     },
     "ration": {
         "triggers": [
@@ -78,7 +80,8 @@ COMMANDS = {
             "current rations", "food tracker", "ration log", "food list", "ration details", "rations please",
             "sort out rations"
         ],
-        "execute": lambda: update_rations(NAME)
+        "execute": lambda: update_rations(NAME),
+        "description": "View your food rations.",
     },
     "recipes": {
         "triggers": [
@@ -97,9 +100,10 @@ COMMANDS = {
             "give me a cooking idea", "help me with cooking", "suggest a dish",
             "what's a good dish to make?", "meal suggestions", "cooking help",
             "recipe ideas", "meal planning", "cooking inspiration", "dish ideas",
-            "what's a quick recipe?", "easy recipes", "healthy recipes", "quick meals"
+            "what's a quick recipe?", "easy recipes", "healthy recipes", "quick meals", "recipe"
         ],
-        "execute": lambda: run_recipe_loop(NAME)
+        "execute": lambda: run_recipe_loop(NAME),
+        "description": "Get cooking ideas and recipes.",
     },
     "exercise": {
         "triggers": [
@@ -112,7 +116,8 @@ COMMANDS = {
             "initiate training", "workout now", "today's training", "training plan",
             "get lifting plan", "get my fitness plan", "what's my gym plan?", "open training"
         ],
-        "execute": lambda: run_workout_loop(NAME)
+        "execute": lambda: run_workout_loop(NAME),
+        "description": "Start your workout or view your training plan.",
     },
     "health": {
         "triggers": [
@@ -126,7 +131,8 @@ COMMANDS = {
             "check physical health", "health insights", "update on my health", "how's my body doing?", "wellness data"
 
         ],
-        "execute": lambda: run_health(NAME)
+        "execute": lambda: run_health(NAME),
+        "description": "Check your health data, supplements, and goals.",
     },
     "status": {
         "triggers": [
@@ -142,7 +148,8 @@ COMMANDS = {
             "how's my day?", "review my day", "where am I?", "summarise the day", "summarise everything",
             "what's going on with me?", "summarise it all", "current overview", "daily sync", "health + progress summary"
         ],
-        "execute": lambda: generate_status(NAME)
+        "execute": lambda: generate_status(NAME),
+        "description": "Get a summary of your health, progress, and status. This will be sent via your email.",
     },
     "clear": {
         "triggers": [
@@ -156,7 +163,17 @@ COMMANDS = {
             "refresh output", "clear everything", "wipe everything", "erase everything",
             "clean everything", "reset everything", "refresh everything"
         ],
-        "execute": lambda: (clear_console(), "Console cleared. " + random_ending(NAME))[-1]
+        "execute": lambda: (clear_console(), "Console cleared. " + random_ending(NAME))[-1],
+        "description": "Clear the console screen.",
+    },
+    "help": {
+        "description": "Show this help message.",
+        "triggers": [
+            "help", "what can you do?", "available commands", "show commands", "list commands",
+            "how do I use this?", "how does this work?", "show help", "i need help",
+            "command list", "show me help", "assist me", "need assistance", "what commands are there?"
+        ],
+        "execute": lambda: generate_help()
     },
     "default": {
         "triggers": [],
@@ -176,6 +193,20 @@ COMMANDS = {
 }
 
 
+def generate_help(specific_command=None):
+    if specific_command and specific_command in COMMANDS:
+        desc = COMMANDS[specific_command]["description"]
+        triggers = COMMANDS[specific_command]["triggers"]
+        return f"{specific_command}: {desc}\nExamples: {', '.join(triggers[:5])}..."
+    else:
+        help_text = "Here are some things you can ask me to do:\n"
+        for command, data in COMMANDS.items():
+            if command != "default":
+                help_text += f" - {command}: {data.get('description', 'No description')}\n"
+        help_text += "\nType something like `help status` for more info about a specific command."
+        return help_text
+
+
 def init_commands(name, sid):
     global NAME, SID
     NAME = name
@@ -186,17 +217,34 @@ def similarity(a: str, b: str) -> float:
     return SequenceMatcher(None, a.lower(), b.lower()).ratio()
 
 
-def get_best_command(user_input: str) -> str:
+def get_best_command(user_input: str) -> tuple:
+    user_input = user_input.strip().lower()
+
+    if user_input.startswith("help "):
+        cmd = user_input[5:].strip().lower()
+        return "help", cmd
+
+    if user_input in ["help", "commands", "show help"]:
+        return "help", None
+
     best_match = "default"
     best_score = 0.0
+
     for command, data in COMMANDS.items():
         for phrase in data["triggers"]:
             score = similarity(user_input, phrase)
             if score > best_score:
                 best_score = score
                 best_match = command
-    return best_match if best_score > 0.6 else "default"
+
+    return (best_match if best_score > 0.6 else "default", None)
 
 
-def execute_command(command: str):
-    return command != "exit", COMMANDS[command]["execute"]()
+def execute_command(command_info):
+    command, arg = command_info
+    if command == "exit":
+        return False, COMMANDS[command]["execute"]()
+    elif command == "help":
+        return True, generate_help(arg)
+    else:
+        return True, COMMANDS[command]["execute"]()

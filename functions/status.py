@@ -1,3 +1,4 @@
+from functions.send import send_custom_email
 from functions.health import get_health_report
 from functions.workout import get_workout_string
 from functions.rations import get_todays_rations_string
@@ -36,12 +37,19 @@ def generate_status(name):
     
     report += ANSI_ESCAPE_PATTERN.sub('', get_todays_rations_string(name))
     report += "\n"*2
+    report += subtitle("NEXT WEEK'S RATIONS", width=TOTAL_WIDTH)
+    report += ANSI_ESCAPE_PATTERN.sub('', get_todays_rations_string(name, offset=1))
+    report += "\n"*2
     report += ANSI_ESCAPE_PATTERN.sub('', get_workout_string(name, weight))
     report += "\n"*2
     report += ANSI_ESCAPE_PATTERN.sub('', get_health_report(name, weight))
     
+    typed_print(f"{MAIN_CONSOLE_PREFIX}Sending you your report (This may take a bit)", newline=False)
+    loading_ellipsis(length=2)
     save_status_report(report)
-    return "Report successfully generated! " + random_ending(name)
+    loading_ellipsis(length=1)
+    print("\n")
+    return "Report successfully generated and sent! " + random_ending(name)
 
 
 def save_status_report(string):
@@ -52,3 +60,8 @@ def save_status_report(string):
     with open(file_path, "w", encoding="utf-8") as file:
         file.write(string)
 
+    send_custom_email(string)
+
+
+if __name__ == "__main__":
+    generate_status("DK")

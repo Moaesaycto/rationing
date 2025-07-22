@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>AegisConnect Report</title>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: #1e1e1e !important;
+                color: #e0e0e0 !important;
+            }
+
+            table,
+            td {
+                color: #e0e0e0 !important;
+            }
+
+            a {
+                color: #9dcfff !important;
+            }
+
+            .light-border {
+                border-color: #444 !important;
+            }
+
+            .warning-box {
+                border-color: #f44336 !important;
+                background-color: #2b1b1b !important;
+                color: #ffaaaa !important;
+            }
+        }
+
+        a,
+        a:visited,
+        a:hover,
+        a:active {
+            color: inherit !important;
+            text-decoration: none !important;
+        }
+    </style>
+</head>
+
+<body style="margin:0; font-family: Arial, sans-serif; background-color: #ffffff; color: #333; text-decoration: none;">
+
+    <!-- Classification Banner -->
+    <table width="100%" cellpadding="0" cellspacing="0"
+        style="background-color: #222; color: #eee; padding: 0.3em 1em;">
+        <tr>
+            <td style="font-size: 12px; text-align: center; letter-spacing: 1px;">
+                CLASSIFIED // AEGIS INTERNAL USE ONLY // OPERATIONAL REGION: SIGMA 9
+            </td>
+        </tr>
+    </table>
+
+    <!-- Header -->
+    <table width="100%" cellpadding="0" cellspacing="0" style="border-bottom: 2px solid #e0e0e0; padding: 1em 0;">
+        <tr>
+            <td style="padding-left: 1em;">
+                <img src="cid:logo_img" alt="Aegis Logo" style="height: 50px;">
+            </td>
+            <td align="right" style="padding-right: 1em;">
+                <h1 style="margin: 0; font-size: 24px;">AegisConnect</h1>
+                <p style="margin: 0; font-size: 14px;">Report for {{TODAY}}</p>
+                <p style="margin: 0; font-size: 11px; color: #888; font-style: italic;">
+                    Internal Dispatch · Priority Tier 2 · AO Code: Σ-R/17-C
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Spacer -->
+    <div style="height: 20px;"></div>
+
+    <!-- Section Title -->
+    <div style="max-width: 600px; margin: 0 auto; padding: 0 1em;">
+        <h2 style="font-size: 18px; margin-bottom: 0.5em; border-bottom: 1px solid #ccc; padding-bottom: 4px;">
+            Personnel Report Overview —
+            <span style="font-size: 14px; font-weight: normal;">
+                File Ref: PRX-4051-B | Auth Level: GARNET-3
+            </span>
+        </h2>
+    </div>
+
+    <!-- Info Table -->
+    <table width="100%" cellpadding="6" cellspacing="0"
+        style="border-collapse: collapse; margin: 0 auto; max-width: 600px;">
+        <tr>
+            <td style="border-bottom: 1px dotted #ccc;">
+                <strong>Report for</strong><br>
+                <span style="font-size: 10px; color: #777;">Personnel Registry ID</span>
+            </td>
+            <td style="border-bottom: 1px dotted #ccc; text-align: right;">{{NAME}}</td>
+        </tr>
+        <tr>
+            <td style="border-bottom: 1px dotted #ccc;">
+                <strong>Authorized by</strong><br>
+                <span style="font-size: 10px; color: #777;">Chain ID: BKR-09</span>
+            </td>
+            <td style="border-bottom: 1px dotted #ccc; text-align: right;">{{AUTHORIZED}}</td>
+        </tr>
+        <tr>
+            <td style="border-bottom: 1px dotted #ccc;">
+                <strong>Date</strong><br>
+                <span style="font-size: 10px; color: #777;">Timestamp UTC+0 — Sync Verified</span>
+            </td>
+            <td style="border-bottom: 1px dotted #ccc; text-align: right;">{{NOW}}</td>
+        </tr>
+    </table>
+
+    <!-- Body Paragraph -->
+    <div style="max-width: 600px; margin: 1em auto; padding: 0 1em;">
+        <p style="font-size: 14px; line-height: 1.6;">
+            This communication is issued in compliance with Aegis Operational Standard-7, verified under Command
+            Signature Hash: <code style="font-family: monospace; font-size: 13px;">A9C7-D22E-FF40-1123</code>.
+        </p>
+        <p style="font-size: 14px; line-height: 1.6;">
+            Field agent biometric sync and nutritional protocols have been validated against Baseline V2.3
+            (C-Ration Spec 2042/A). Clearance pathways are active via the issuing console terminal under SecNet Layer
+            3 compliance.
+        </p>
+        <span style="display: none;">UNIQ-ID: {{UUID}}</span>
+
+        <!-- Warning Box -->
+        <div style="
+        display: flex;
+        align-items: center;
+        border: 1px solid #d32f2f;
+        background-color: #fdecea;
+        color: #b71c1c;
+        padding: 1em;
+        margin: 1em 0;
+        border-radius: 5px;
+        " class="warning-box">
+            <!-- Warning SVG Icon -->
+            <img src="cid:warning_img" alt="Warning" style="height: 24px; width: 24px; margin-right: 1em;">
+            <!-- Warning Text -->
+            <p style="margin: 0; font-size: 14px; line-height: 1.4;">
+                This transmission is classified under Aegis Security Directive 4.5.1.<br>
+                Dissemination to unauthorised personnel is a breach of operational protocol and may result in
+                disciplinary action under Articles 7–9 of the PMC Conduct Accord.<br>
+                Breach reports must be submitted via SecCom Terminal Node ZETA-12 within 12 operational hours.
+            </p>
+        </div>
+    </div>
+    <span style="display: none;">UNIQ-ID: {{UUID}}</span>
+
+    <!-- Footer -->
+    <table width="100%" cellpadding="0" cellspacing="0"
+        style="border-top: 2px solid #e0e0e0; padding: 1em 0; margin-top: 2em;">
+        <tr>
+            <td align="center" style="font-size: 12px; color: #999;">
+                &copy; {{YEAR}} Aegis Integrated Response Systems.<br>
+                Operated under Charter Designation AO-4152. All actions logged and monitored.<br>
+                Generated by SigUnit-A73 • LogRef:
+                <code style="font-size: 11px;">CD-09.FRM/AegisConnect.Core</code>
+            </td>
+        </tr>
+    </table>
+    <span style="display: none;">UNIQ-ID: {{UUID}}</span>
+
+</body>
+
+</html>
