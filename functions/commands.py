@@ -78,7 +78,7 @@ COMMANDS = {
             "update the stuff I'm eating", "let's change my meals", "what food do I have?",
             "check food inventory", "food stock", "ration status", "food supplies",
             "current rations", "food tracker", "ration log", "food list", "ration details", "rations please",
-            "sort out rations"
+            "sort out rations",
         ],
         "execute": lambda: update_rations(NAME),
         "description": "View your food rations.",
@@ -100,7 +100,7 @@ COMMANDS = {
             "give me a cooking idea", "help me with cooking", "suggest a dish",
             "what's a good dish to make?", "meal suggestions", "cooking help",
             "recipe ideas", "meal planning", "cooking inspiration", "dish ideas",
-            "what's a quick recipe?", "easy recipes", "healthy recipes", "quick meals", "recipe"
+            "what's a quick recipe?", "easy recipes", "healthy recipes", "quick meals", "recipe",
         ],
         "execute": lambda: run_recipe_loop(NAME),
         "description": "Get cooking ideas and recipes.",
@@ -114,7 +114,8 @@ COMMANDS = {
             "start strength training", "strength session", "training time",
             "start gym routine", "exercise routine", "launch workout", "exercise plan",
             "initiate training", "workout now", "today's training", "training plan",
-            "get lifting plan", "get my fitness plan", "what's my gym plan?", "open training"
+            "get lifting plan", "get my fitness plan", "what's my gym plan?", "open training",
+            "I would like to see my workouts",
         ],
         "execute": lambda: run_workout_loop(NAME),
         "description": "Start your workout or view your training plan.",
@@ -128,7 +129,7 @@ COMMANDS = {
             "weight progress", "weight update", "track my weight", "how's my weight?", "weight report", "check weight loss",
             "how much weight have I lost?", "am I making health progress?", "progress update", "weight tracking",
             "health notes", "show health notes", "any health notes?", "view health goals", "my health goals",
-            "check physical health", "health insights", "update on my health", "how's my body doing?", "wellness data"
+            "check physical health", "health insights", "update on my health", "how's my body doing?", "wellness data",
 
         ],
         "execute": lambda: run_health(NAME),
@@ -146,7 +147,7 @@ COMMANDS = {
             "status rundown", "daily dashboard", "log update", "daily insights", "today's report", "what's my progress?",
             "fetch report", "overview please", "log status", "report status", "print status", "show everything",
             "how's my day?", "review my day", "where am I?", "summarise the day", "summarise everything",
-            "what's going on with me?", "summarise it all", "current overview", "daily sync", "health + progress summary"
+            "what's going on with me?", "summarise it all", "current overview", "daily sync", "health + progress summary",
         ],
         "execute": lambda: generate_status(NAME),
         "description": "Get a summary of your health, progress, and status. This will be sent via your email.",
@@ -161,7 +162,7 @@ COMMANDS = {
             "erase display", "clean display", "reset display", "refresh display",
             "clear output", "wipe output", "erase output", "clean output", "reset output",
             "refresh output", "clear everything", "wipe everything", "erase everything",
-            "clean everything", "reset everything", "refresh everything"
+            "clean everything", "reset everything", "refresh everything",
         ],
         "execute": lambda: (clear_console(), "Console cleared. " + random_ending(NAME))[-1],
         "description": "Clear the console screen.",
@@ -171,7 +172,7 @@ COMMANDS = {
         "triggers": [
             "help", "what can you do?", "available commands", "show commands", "list commands",
             "how do I use this?", "how does this work?", "show help", "i need help",
-            "command list", "show me help", "assist me", "need assistance", "what commands are there?"
+            "command list", "show me help", "assist me", "need assistance", "what commands are there?",
         ],
         "execute": lambda: generate_help()
     },

@@ -10,7 +10,7 @@ from functions.os import (
     menu_prompt, typed_print, get_resource_path,
     typed_input, numeric_input, subtitle
 )
-from options import WORKOUT_CONSOLE_PREFIX, USER_PREFIX, DEFAULT_WIDTH
+from options import WORKOUT_CONSOLE_PREFIX, USER_PREFIX, DEFAULT_WIDTH, MAX_WEIGHT
 
 # Globals
 NAME = None
@@ -20,7 +20,6 @@ CARDIO_WORKOUTS = None
 
 DAY = None
 WEEK = None
-MAX_WEIGHT = 170
 
 def init_workout(name):
     global NAME, STRENGTH_WORKOUTS, GROWTH_WORKOUTS, CARDIO_WORKOUTS, DAY, WEEK
